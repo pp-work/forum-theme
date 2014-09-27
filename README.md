@@ -6,9 +6,13 @@ Initial development & launch had to happen quickly so it's a bit messy and hairy
 
 To make it look the way it was intended, enable "Display root categories as headings" in Forum Settings -> Categories.
 
-To set a category-specific icon (using [Font Awesome](http://fortawesome.github.io/Font-Awesome/)) for the category page, edit a subcategory. If you'd like to use, say, [fa-binoculars](http://fortawesome.github.io/Font-Awesome/icon/binoculars/), type in  `fa-fa-binoculars` in the field "Css Class". To set a color, add one of `pp-purple pp-orange pp-limegrepp-pink pp-yellow pp-red pp-blue pp-darkblupp-turquoise` (defined in `less/themes/pirat.less`).
+To set a category-specific icon (using [Font Awesome](http://fortawesome.github.io/Font-Awesome/)) for the category page, edit a subcategory. If you'd like to use, say, [fa-binoculars](http://fortawesome.github.io/Font-Awesome/icon/binoculars/), type `fa-fa-binoculars` in the field "Css Class" (`fa-fa` not `fa`!). To set a color, add one of `pp-purple pp-orange pp-limegreen pp-pink pp-yellow pp-red pp-blue pp-darkblue pp-turquoise` (defined in `less/themes/pirat.less`).
 
 We don't use activities. If you want them, edit or remove `views/activity/all.php`.
+
+Original README below.
+
+---
 
 [![Bootstrap for Vanilla](screenshot.png)](https://github.com/kasperisager/vanilla-bootstrap)
 
