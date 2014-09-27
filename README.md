@@ -1,3 +1,19 @@
+This is a highly tailored version of [Kasper Kronborg Isager's](https://github.com/kasperisager) [Bootstrap for Vanilla](https://github.com/kasperisager/vanilla-bootstrap), developed by/for [Piratpartiet](http://www.piratpartiet.se/).
+
+Currently it depends on the [Vanilla-PirateWeb-Plugin](https://github.com/pp-work/Vanilla-PirateWeb-Plugin) being installed, because without it, Smarty will die complaining about an unrecognized tag. This will be fixed. In the meantime, you can edit `views/default.master.tpl` and remove the two instances of {pw_link}.
+
+Initial development & launch had to happen quickly so it's a bit messy and hairy in places.
+
+To make it look the way it was intended, enable "Display root categories as headings" in Forum Settings -> Categories.
+
+To set a category-specific icon (using [Font Awesome](http://fortawesome.github.io/Font-Awesome/)) for the category page, edit a subcategory. If you'd like to use, say, [fa-binoculars](http://fortawesome.github.io/Font-Awesome/icon/binoculars/), type `fa-fa-binoculars` in the field "Css Class" (`fa-fa` not `fa`!). To set a color, add one of `pp-purple pp-orange pp-limegreen pp-pink pp-yellow pp-red pp-blue pp-darkblue pp-turquoise` (defined in `less/themes/pirat.less`).
+
+We don't use activities. If you want them, edit or remove `views/activity/all.php`.
+
+Original README below.
+
+---
+
 [![Bootstrap for Vanilla](screenshot.png)](https://github.com/kasperisager/vanilla-bootstrap)
 
 [![Release](http://img.shields.io/github/release/kasperisager/vanilla-bootstrap.svg?style=flat)](https://github.com/kasperisager/vanilla-bootstrap/releases) [![Depencency Status](http://img.shields.io/gemnasium/kasperisager/vanilla-bootstrap.svg?style=flat)](https://gemnasium.com/kasperisager/vanilla-bootstrap)
