@@ -9,9 +9,9 @@
   $(document).on('ready ajaxSuccess', function () {
 
     // Initialize or re-initialize iCheck
-    // Disable until event propagation bug is fixed
-    // $('input:not(.icheck-input)').icheck();
-
+    $('input:not(.icheck-input)').filter(function(){
+        return $(this).parent().is(":not(.AdminCheck)");
+    }).icheck();
   });
 
   $(function () {
