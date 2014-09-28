@@ -9,9 +9,7 @@
   $(document).on('ready ajaxSuccess', function () {
 
     // Initialize or re-initialize iCheck
-    $('input:not(.icheck-input)').filter(function(){
-        return $(this).parent().is(":not(.AdminCheck)");
-    }).icheck();
+    $('input:not(.icheck-input)').icheck();
   });
 
   $(function () {
