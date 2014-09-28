@@ -9,7 +9,8 @@
   $(document).on('ready ajaxSuccess', function () {
 
     // Initialize or re-initialize iCheck
-    $('input:not(.icheck-input)').icheck();
+    // Disable until event propagation bug is fixed
+    // $('input:not(.icheck-input)').icheck();
 
   });
 
