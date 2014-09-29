@@ -12,6 +12,23 @@
     $('input:not(.icheck-input)').icheck();
   });
 
+  $.expr[':'].external = function(obj){
+    return !obj.href.match(/^mailto\:/)
+           && (obj.hostname != location.hostname)
+           && !obj.href.match(/^javascript\:/)
+           && !obj.href.match(/^$/)
+  };
+
+  $.expr[':'].internal = function(obj){
+    return $(obj).attr('href') !== undefined && !$.expr[':'].external(obj);
+  };
+
+  $(document).ready(function() {
+    // Open external links in new window/tab
+    $('.Message a:external').attr('target', '_blank');
+    $('.Message a:internal').attr('target', '');
+  });
+
   $(function () {
 
     // Programmatically hide buttons that are supposed to be hidden. This
