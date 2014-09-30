@@ -3,6 +3,7 @@
 $Controller = Gdn::Controller();
 $Depth = property_exists($Controller, 'Category') ? GetValue('Depth', $Controller->Category, '') : '';
 $Name = property_exists($Controller, 'Category') ? GetValue('Name', $Controller->Category, '') : '';
+$ResolvedPath = property_exists($Controller, 'ResolvedPath') ? GetValue('ResolvedPath', $Controller, '') : '';
 
 echo '<div class="BoxButtons BoxNewDiscussion">';
 $Text = T('Start a New Discussion', 'New Discussion');
@@ -14,9 +15,9 @@ if ($this->QueryString) {
 $Css = 'Button Primary Action NewDiscussion';
 $Css .= strpos($this->CssClass, 'Big') !== FALSE ? ' BigButton' : '';
 $Attr = array('title' => 'Skapa en tråd i '.$Name);
-if ($Depth < 2) {
+if ($Depth < 2 || $ResolvedPath == 'vanilla/post/discussion') {
     $Css .= ' disabled';
-    $Attr['title'] = 'Du kan inte skapa en tråd här';
+    $Attr['title'] = $Depth < 2 ? T('You cannot create a new discussion here.') : T('Click Post Discussion to post.');
     $Url = '#';
 }
 if (count($this->Buttons) == 0) {
