@@ -32,6 +32,10 @@
         $(this).children('p').prepend('<a id="' + this.id + '" class="anchor" />');
         $(this).removeAttr('id');
     });
+    $('sup[id^="fnref"]').each(function() {
+      $(this).append('<a id="' + this.id + '" class="anchor" />');
+      $(this).removeAttr('id');
+    });
     if(window.location.hash != "") {
       window.location.href = window.location.hash;
     }
