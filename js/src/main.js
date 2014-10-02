@@ -7,7 +7,6 @@
   };
 
   $(document).on('ready ajaxSuccess', function () {
-
     // Initialize or re-initialize iCheck
     $('input:not(.icheck-input)').icheck();
   });
@@ -27,6 +26,15 @@
     // Open external links in new window/tab
     $('.Message a:external').attr('target', '_blank');
     $('.Message a:internal').attr('target', '');
+
+    // Create anchors for footnotes so we can use offset for navbar
+    $('.footnotes ol li').each(function() {
+        $(this).children('p').prepend('<a id="' + this.id + '" class="anchor" />');
+        $(this).removeAttr('id');
+    });
+    if(window.location.hash != "") {
+      window.location.href = window.location.hash;
+    }
   });
 
   $(function () {
