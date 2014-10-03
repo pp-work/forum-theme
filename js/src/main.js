@@ -32,13 +32,37 @@
         $(this).children('p').prepend('<a id="' + this.id + '" class="anchor" />');
         $(this).removeAttr('id');
     });
-    $('sup[id^="fnref"]').each(function() {
-      $(this).append('<a id="' + this.id + '" class="anchor" />');
-      $(this).removeAttr('id');
+
+    // Special case for links from footnotes back to main text
+    $('a[href^="#fnref"]').click(function(e) {
+      var target = this.hash.replace(/#/, '');
+
+      // Use document.getElementById so we don't need to escape footnote IDs with : in them
+      target = document.getElementById(target);
+      window.location.hash = this.hash;
+      $('html,body').animate({
+        scrollTop: $(target).offset().top - 65
+      });
+      return false;
+
     });
-    if(window.location.hash != "") {
+  });
+
+  $(window).load(function() {
+
+    if (window.location.hash.substring(0, 6) == "#fnref") {
+      var target = window.location.hash.replace(/#/, '');
+      target = document.getElementById(target);
+
+      $('html,body').animate({
+        scrollTop: $(target).offset().top - 65
+      });
+      return false;
+
+    } else if (window.location.hash != "") {
       window.location.href = window.location.hash;
     }
+
   });
 
   $(function () {
