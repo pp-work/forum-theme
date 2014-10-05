@@ -69,7 +69,7 @@
 
     //Click event to scroll to top
     $('.scrollToTop').on('click', function(event) {
-      if ($(event.target).is('.navbar-header,.navbar-collapse')) {
+      if ($(event.target).is('.navbar, .navbar-header, .navbar-collapse')) {
         $('html, body').animate({scrollTop : 0}, 400);
         return false;
       }
