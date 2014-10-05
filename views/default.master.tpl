@@ -8,7 +8,7 @@
   </head>
   <body id="{$BodyID}" class="{$BodyClass} sticky-footer-body">
 
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top scrollToTop" role="navigation">
       <div class="container">
 
         <div class="navbar-header">
@@ -21,7 +21,7 @@
           <a class="navbar-brand" href="{link path="home"}">{logo}</a>
         </div>
 
-        <div class="navbar-collapse collapse scrollToTop">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li>
               <a href="http://www.piratpartiet.se" target="_blank">Hemsidan</a>
