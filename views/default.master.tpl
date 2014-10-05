@@ -21,7 +21,7 @@
           <a class="navbar-brand" href="{link path="home"}">{logo}</a>
         </div>
 
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse scrollToTop">
           <ul class="nav navbar-nav">
             <li>
               <a href="http://www.piratpartiet.se" target="_blank">Hemsidan</a>

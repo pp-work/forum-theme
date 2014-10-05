@@ -65,6 +65,16 @@
 
   });
 
+  $(document).on('ready', function () {
+
+    //Click event to scroll to top
+    $('.scrollToTop').on('click', function() {
+      console.log('scroll');
+      $('body').animate({scrollTop : 0}, 400);
+      return false;
+    });
+  });
+
   $(function () {
 
     // Programmatically hide buttons that are supposed to be hidden. This
