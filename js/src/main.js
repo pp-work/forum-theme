@@ -68,10 +68,11 @@
   $(document).on('ready', function () {
 
     //Click event to scroll to top
-    $('.scrollToTop').on('click', function() {
-      console.log('scroll');
-      $('body').animate({scrollTop : 0}, 400);
-      return false;
+    $('.scrollToTop').on('click', function(event) {
+      if ($(event.target).is('.navbar-header,.navbar-collapse')) {
+        $('body').animate({scrollTop : 0}, 400);
+        return false;
+      }
     });
   });
 
