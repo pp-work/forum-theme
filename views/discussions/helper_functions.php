@@ -141,7 +141,7 @@ function WriteDiscussion($Discussion, &$Sender, &$Session) {
       <?php
          echo AdminCheck($Discussion, array('', ' '));
          WriteTags($Discussion);
-         echo Anchor($DiscussionName, $DiscussionUrl);
+         echo Anchor(SliceString($DiscussionName, 80), $DiscussionUrl, '', array('title' => $DiscussionName));
 
          if (C('Vanilla.Categories.Use') && $Category)
             echo Wrap(Anchor(htmlspecialchars($Discussion->Category), CategoryUrl($Discussion->CategoryUrlCode)), 'span', array('class' => 'Tag MItem Category '.$Category['CssClass']));
