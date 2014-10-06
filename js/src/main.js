@@ -46,6 +46,12 @@
       return false;
 
     });
+
+    // Allow form submission with ctrl+return
+    $('#Form_Body').bind('keyup', 'ctrl+return', function(){
+      $('#Form_PostComment').click();
+    });
+
   });
 
   $(window).load(function() {
