@@ -82,6 +82,7 @@ function WriteComment($Comment, $Sender, $Session, $CurrentOffset) {
       // Write a stub for the latest comment so it's easy to link to it from outside.
       if ($CurrentOffset == Gdn::Controller()->Data('_LatestItem')) {
          echo '<a class="anchor" id="latest"></a>';
+         echo '<a class="anchor" id="Comment_'.$Comment->CommentID.'"></a>';
       } else {
          echo '<a class="anchor" id="Comment_'.$Comment->CommentID.'"></a>';
       }
