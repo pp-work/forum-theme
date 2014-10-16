@@ -64,11 +64,13 @@
 
         <main class="page-content" role="main">
 
+          {if $User.SignedIn}
           <div class="visible-xs">
             <div class="latest-discussions-top text-center">
               <a href="/forum/discussions"><span class="Sprite SpDiscussions"></span> Senaste trådar</a>
             </div>
           </div>
+          {/if}
 
           {breadcrumbs}
           {if $User.SignedIn}
