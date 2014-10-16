@@ -63,6 +63,13 @@
       <div class="row">
 
         <main class="page-content" role="main">
+
+          <div class="visible-xs">
+            <div class="latest-discussions-top text-center">
+              <a href="/forum/discussions"><span class="Sprite SpDiscussions"></span> Senaste trådar</a>
+            </div>
+          </div>
+
           {breadcrumbs}
           {if $User.SignedIn}
             <div class="well search-form MobileSearch">{searchbox}</div>
