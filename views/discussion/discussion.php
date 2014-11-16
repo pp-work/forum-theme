@@ -64,13 +64,14 @@ $this->FireEvent('BeforeDiscussionDisplay');
             }
             $this->FireEvent('DiscussionInfo');
             $this->FireEvent('AfterDiscussionMeta'); // DEPRECATED
+            WriteDiscussionOptions();
             ?>
          </div>
       </div>
       <?php $this->FireEvent('BeforeDiscussionBody'); ?>
       <div class="Item-BodyWrap">
          <div class="Item-Body">
-            <div class="Message">   
+            <div class="Message"> 
                <?php
                   echo FormatBody($Discussion);
                ?>
